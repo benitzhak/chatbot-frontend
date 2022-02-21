@@ -1,0 +1,230 @@
+@font-face {
+  font-family: poppins;
+  src: url(./assets/Poppins-Regular.ttf);
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  color: #212121;
+  font-family: poppins;
+  display: grid;
+  place-items: center;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #263238;
+  border-radius: 10px;
+}
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.joinChatContainer h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #263238;
+}
+.joinChatContainer input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid #26323838;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: ease-in-out .2s;
+}
+
+.joinChatContainer input:focus {
+  border: 2px solid #26323870;
+}
+
+.joinChatContainer button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #263238;
+  color: #fff;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+
+.chat-window {
+  width: 300px;
+  box-shadow: 0px 3px 35px -1px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.chat-window p {
+  margin: 0;
+}
+.chat-window .chat-header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  background: #263238;
+  position: relative;
+  cursor: pointer;
+}
+.chat-window .chat-header p {
+  display: block;
+  padding: 0 1em 0 2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  background: #fff;
+  overflow-y: scroll;
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+  font-family: poppins;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 10px;
+  background-color: #C571F8;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+  border-radius: 15px 15px 15px 5px;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  border-radius: 15px 15px 5px 15px;
+  justify-content: flex-end;
+  background-color: #EDEDED;
+  color: #505050;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+
+.chat-window .chat-body .message .message-meta .username{
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta .time{
+  align-self: flex-end;
+  font-size: 10px;
+}
+
+.typing img {
+  width: 20%;
+}
+
+.chat-window .chat-footer {
+  min-height: 40px;
+  border-top: none;
+  display: flex;
+  border-radius: 0 0 5px 5px;
+  padding-top: 40px;
+  position: relative;
+  bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.chat-window .chat-footer textarea {
+  width: 100%;
+  max-height: 200px;
+  border: 0;
+  padding-left: 0.7em;
+  font-size: 1em;
+  background-color: #EDEDED;
+  border-radius: 10px;
+  font-family: poppins;
+  outline: none;
+  resize: none;
+}
+
+.chat-window .chat-footer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  background-color: #C571F8;
+  font-size: 35px;
+  color: white;
+  margin-left: 10px;
+  padding: 5px 10px; 
+  border-radius: 10px;
+  max-height: 60px;
+}
+
+.hide {
+  opacity: 0 !important;
+}
